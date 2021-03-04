@@ -1,12 +1,19 @@
 
 exports.min = function min (array) {
-  return 0;
+  if (Array.isArray(array) && array.some(e => typeof e === 'number')) {
+  return array.reduce((a, c) => a > c ? c: a);
+  } return 0;
 }
 
 exports.max = function max (array) {
-  return 0;
+  if (Array.isArray(array) && array.some(e => typeof e === 'number')) {
+    return array.reduce((a, c) => a > c ? a: c);
+    } return 0;
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if (Array.isArray(array) && array.some(e => typeof e === 'number')) {
+      s = array.reduce((a, c) => a + c);
+      return s/array.length;
+    } return 0;
 }
